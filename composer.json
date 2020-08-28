@@ -5,10 +5,10 @@
             "url": "https://github.com/andrepelealu/missioncontrolcore.git"
         }
     ],
-    "name": "eyeweb/payments",
+    "name": "andrepelealu/payments",
     "require": {
         "amzn/amazon-pay-sdk-php": "^3.4",
-        "eyeweb/missioncontrolcore": "6.1.*",
+        "andrepelealu/missioncontrolcore": "dev-master",
         "paypal/paypal-checkout-sdk": "1.0.0",
         "paypal/rest-api-sdk-php": "1.13.0",
         "securetrading/stpp_json": "^1.0",
