@@ -2,7 +2,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://bitbucket.org/eyeweb/missioncontrolcore"
+            "url": "https://github.com/andrepelealu/missioncontrolcore.git"
         }
     ],
     "name": "eyeweb/payments",
