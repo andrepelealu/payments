@@ -1,0 +1,51 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://bitbucket.org/eyeweb/missioncontrolcore"
+        }
+    ],
+    "name": "eyeweb/payments",
+    "require": {
+        "amzn/amazon-pay-sdk-php": "^3.4",
+        "eyeweb/missioncontrolcore": "6.1.*",
+        "paypal/paypal-checkout-sdk": "1.0.0",
+        "paypal/rest-api-sdk-php": "1.13.0",
+        "securetrading/stpp_json": "^1.0",
+        "stripe/stripe-php": "^6.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "MissionControl\\Payments\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.0"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MissionControl\\Payments\\Providers\\PaymentServiceProvider"
+            ]
+        }
+    }
+}
